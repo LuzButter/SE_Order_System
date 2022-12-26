@@ -1,4 +1,4 @@
-package GUI;
+﻿package GUI;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -44,7 +44,8 @@ public class choseSys extends JFrame implements ActionListener{
 		if(s==t1) {
 			
 			this.dispose();
-			new t1_login();
+			t1_login t1 = new t1_login();
+			t1.main(null);
 		}
 		else if(s==t2)	{
 			
@@ -54,17 +55,17 @@ public class choseSys extends JFrame implements ActionListener{
 		else if(s==t3)	{
 			
 			this.dispose();
-			new t3_login();
+			//new t3_login();
 		}
 		else if(s==t4)	{
 			
 			this.dispose();
-			new t4_login();
+			//new t4_login();
 		}
 		else if(s==t5)	{
 			
 			this.dispose();
-			new t5_login();
+			//new t5_login();
 		}
 	}
 
