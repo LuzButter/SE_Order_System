@@ -43,28 +43,28 @@ public class choseSys extends JFrame implements ActionListener{
 		JButton s = (JButton) e.getSource();
 		if(s==t1) {
 			
-			this.dispose();
+			this.setVisible(false);
 			t1_login t1 = new t1_login();
 			t1.main(null);
 		}
 		else if(s==t2)	{
 			
-			this.dispose();
+			this.setVisible(false);
 			new t2_login();
 		}
 		else if(s==t3)	{
 			
-			this.dispose();
+			this.setVisible(false);
 			//new t3_login();
 		}
 		else if(s==t4)	{
 			
-			this.dispose();
+			this.setVisible(false);
 			//new t4_login();
 		}
 		else if(s==t5)	{
 			
-			this.dispose();
+			this.setVisible(false);
 			//new t5_login();
 		}
 	}

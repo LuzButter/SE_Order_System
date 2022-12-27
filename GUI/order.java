@@ -13,6 +13,7 @@ public class order extends JFrame implements ActionListener{
 	private JButton cui3 = new JButton("cuisine 3");
 	private JButton cui4 = new JButton("cuisine 4");
 	private JButton done = new JButton("done");
+	private JButton save = new JButton("save");
 	
 	private JTextField table = new JTextField();
 	//private JPanel panel = new JPanel();
@@ -39,6 +40,7 @@ public class order extends JFrame implements ActionListener{
 		
 		orders.setBounds(100, 250, 270, 100);
 		done.setBounds(180, 400, 90, 30);
+		save.setBounds(360, 400, 90, 30);
 		
 		//panel.setBounds(100, 250, 280, 110);
 		
@@ -47,6 +49,7 @@ public class order extends JFrame implements ActionListener{
 		add(cui3);
 		add(cui4);
 		add(done);
+		add(save);
 		add(orders);
 		add(table);
 		//add(panel);
@@ -56,6 +59,7 @@ public class order extends JFrame implements ActionListener{
 		cui3.addActionListener(this);
 		cui4.addActionListener(this);
 		done.addActionListener(this);
+		save.addActionListener(this);
 		
 		int s = t2.x;
 		String stringvalue = new String("Table "+s);
@@ -81,6 +85,11 @@ public class order extends JFrame implements ActionListener{
 		else if(e.getSource()==done) {
 			orders.setText(cuis);
 			//panel.add(new JScrollPane(orders));
+			
+		}
+		else if(e.getSource() == save)
+		{
+			t2.setVisible(true);
 		}
 	}
 }

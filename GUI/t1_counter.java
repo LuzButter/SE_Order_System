@@ -5,10 +5,11 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class t2_counter implements ActionListener
+public class t1_counter implements ActionListener
 {
     static JFrame countFrame;
     static JButton seat;
+    static JFrame seating;
 
     public  void frame()
     {
@@ -36,8 +37,8 @@ public class t2_counter implements ActionListener
 
     public static void frame2()
     {
-        JFrame seating = new JFrame("座位表");
-        seating.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        seating = new JFrame("座位表");
+        seating.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         seating.setExtendedState(JFrame.MAXIMIZED_BOTH);
         seating.setVisible(true);
 
@@ -59,6 +60,8 @@ public class t2_counter implements ActionListener
         JButton leave = new JButton("離座");
         leave.setBounds(0, 10, 40, 40);
         seating.add(leave);
+        JButton back = new JButton("返回");
+        seating.add(back);
 
         enter.addActionListener(new ActionListener()
         {
@@ -85,6 +88,10 @@ public class t2_counter implements ActionListener
                     {
                         T4.setVisible(false);
                     }
+
+                    seating.setVisible(false);
+                    t2_login t2 = new t2_login();
+                    t2.main(null);
                 }
             }
         });
@@ -122,11 +129,24 @@ public class t2_counter implements ActionListener
             }
         });
 
+        back.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                if(e.getSource() == back)
+                {
+                    seating.dispose();
+                    choseSys cs = new choseSys();
+                    cs.setVisible(true);
+                }
+            }
+        });
+
     }
 
     public static void main(String[]args)
     {
-        t2_counter frame = new t2_counter();
+        t1_counter frame = new t1_counter();
         frame.frame();
     }
     public void actionPerformed(ActionEvent e) 

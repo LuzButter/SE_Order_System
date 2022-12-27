@@ -42,7 +42,7 @@ public class t1_login {
                 if(e.getSource() == button)
                 {
                     frame.dispose();
-                    t2_counter c  = new t2_counter();
+                    t1_counter c  = new t1_counter();
                     c.frame();
                 }
             }
