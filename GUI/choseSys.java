@@ -55,7 +55,8 @@ public class choseSys extends JFrame implements ActionListener{
 		else if(s==t3)	{
 			
 			this.setVisible(false);
-			//new t3_login();
+			t3_login t3 = new t3_login();
+			t3.main(null);
 		}
 		else if(s==t4)	{
 			
