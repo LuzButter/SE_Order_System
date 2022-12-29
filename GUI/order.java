@@ -13,10 +13,11 @@ public class order extends JFrame implements ActionListener{
 	String[] cui4tochose = {"冰淇淋", "提拉米蘇", "布丁"};
 	
 	public String cuis="";
-	private JTextField cui1 = new JTextField("湯");
-	private JTextField cui2 = new JTextField("開胃菜");
-	private JTextField cui3 = new JTextField("主餐");
-	private JTextField cui4 = new JTextField("甜點");
+	private JButton cui1 = new JButton("湯");
+	private JButton cui2 = new JButton("開胃菜");
+	private JButton cui3 = new JButton("主餐");
+	private JButton cui4 = new JButton("甜點");
+	
 	private JButton cui1_done = new JButton("確認");
 	private JButton cui2_done = new JButton("確認");
 	private JButton cui3_done = new JButton("確認");
@@ -51,21 +52,25 @@ public class order extends JFrame implements ActionListener{
 		cui1.setBounds(30, 80, 120, 30);
 		//JComboBox<String> jComboBox1 = new JComboBox<>(cui1tochose);
 		jComboBox1.setBounds(200, 80, 120, 30);
+		jComboBox1.setVisible(false);
 		cui1_done.setBounds(350, 80, 90, 30);
 		
 		cui2.setBounds(30, 120, 120, 30);
 		//JComboBox<String> jComboBox2 = new JComboBox<>(cui2tochose);
 		jComboBox2.setBounds(200, 120, 120, 30);
+		jComboBox2.setVisible(false);
 		cui2_done.setBounds(350, 120, 90, 30);
 		
 		cui3.setBounds(30, 160, 120, 30);
 		//JComboBox<String> jComboBox3 = new JComboBox<>(cui3tochose);
 		jComboBox3.setBounds(200, 160, 120, 30);
+		jComboBox3.setVisible(false);
 		cui3_done.setBounds(350, 160, 90, 30);
 		
 		cui4.setBounds(30, 200, 120, 30);
 		//JComboBox<String> jComboBox4 = new JComboBox<>(cui4tochose);
 		jComboBox4.setBounds(200, 200, 120, 30);
+		jComboBox4.setVisible(false);
 		cui4_done.setBounds(350, 200, 90, 30);
 		
 		orders.setBounds(100, 250, 270, 100);
@@ -92,6 +97,11 @@ public class order extends JFrame implements ActionListener{
 		add(jComboBox3);
 		add(jComboBox4);
 		
+		cui1.addActionListener(this);
+		cui2.addActionListener(this);
+		cui3.addActionListener(this);
+		cui4.addActionListener(this);
+		
 		cui1_done.addActionListener(this);
 		cui2_done.addActionListener(this);
 		cui3_done.addActionListener(this);
@@ -108,20 +118,34 @@ public class order extends JFrame implements ActionListener{
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==cui1) {
+			jComboBox1.setVisible(true);
+			//jComboBox1.setBounds(200, 80, 120, 30);
+		}
+		else if(e.getSource()==cui2) {
+			jComboBox2.setVisible(true);
+		}
+		else if(e.getSource()==cui3) {
+			jComboBox3.setVisible(true);
+		}
+		else if(e.getSource()==cui4) {
+			jComboBox4.setVisible(true);
+		}
+		
 		if(e.getSource()==cui1_done) {
-			cuis = cuis + jComboBox1.getItemAt(jComboBox1.getSelectedIndex())+", ";
+			cuis = cuis + jComboBox1.getItemAt(jComboBox1.getSelectedIndex())+"、 ";
 			orders.setText(cuis);
 		}
 		else if(e.getSource()==cui2_done) {
-			cuis = cuis + jComboBox2.getItemAt(jComboBox2.getSelectedIndex())+", ";
+			cuis = cuis + jComboBox2.getItemAt(jComboBox2.getSelectedIndex())+"、 ";
 			orders.setText(cuis);
 		}
 		else if(e.getSource()==cui3_done) {
-			cuis = cuis + jComboBox3.getItemAt(jComboBox3.getSelectedIndex())+", ";
+			cuis = cuis + jComboBox3.getItemAt(jComboBox3.getSelectedIndex())+"、 ";
 			orders.setText(cuis);
 		}
 		else if(e.getSource()==cui4_done) {
-			cuis = cuis + jComboBox4.getItemAt(jComboBox4.getSelectedIndex())+", ";
+			cuis = cuis + jComboBox4.getItemAt(jComboBox4.getSelectedIndex())+"、 ";
 			orders.setText(cuis);
 		}
 		else if(e.getSource()==done) {
