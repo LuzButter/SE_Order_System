@@ -91,7 +91,7 @@ public class t1_counter implements ActionListener
 
                     seating.setVisible(false);
                     t2_login t2 = new t2_login();
-                    t2.main(null);
+                    //t2.main(null);
                 }
             }
         });
