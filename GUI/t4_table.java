@@ -17,6 +17,7 @@ public class t4_table extends JFrame implements ActionListener{
 	private JButton table3 = new JButton("clean Table 3");
 	private JButton table4 = new JButton("clean Table 4");
 	private JButton finish = new JButton("finish");
+	private JButton back = new JButton("返回");
 	
 	public static void main(String[] args) {
 		t4_table t4 = new t4_table();
@@ -39,6 +40,7 @@ public class t4_table extends JFrame implements ActionListener{
 		table4.setBounds(240, 250, 120, 120);
 		table4_state.setBounds(240, 390, 120, 30);
 		finish.setBounds(360, 400, 90, 30);
+		back.setBounds(360, 350, 90, 30);
 		
 		add(table1);
 		add(table1_state);
@@ -49,12 +51,14 @@ public class t4_table extends JFrame implements ActionListener{
 		add(table4);
 		add(table4_state);
 		add(finish);
+		add(back);
 		
 		table1.addActionListener(this);
 		table2.addActionListener(this);
 		table3.addActionListener(this);
 		table4.addActionListener(this);
 		finish.addActionListener(this);
+		back.addActionListener(this);
 		
 		table1_state.setText("桌子狀態");
 		table2_state.setText("桌子狀態");
@@ -84,6 +88,9 @@ public class t4_table extends JFrame implements ActionListener{
 		else if(e.getSource() == finish) {
 			//t1_counter t1 = new t1_counter();
 			//t1.seating.setVisible(true);
+		}
+		else if(e.getSource() == back) {
+			new choseSys();
 		}
 	}
 }
