@@ -10,6 +10,8 @@ public class t2_table extends JFrame implements ActionListener{
 	private JButton table3 = new JButton("Table 3");
 	private JButton table4 = new JButton("Table 4");
 	private JButton finish = new JButton("finish");
+	private JButton back = new JButton("返回");
+
 	
 	public static void main(String[] args) {
 		t2_table t2 = new t2_table();
@@ -28,19 +30,25 @@ public class t2_table extends JFrame implements ActionListener{
 		table3.setBounds(40, 250, 120, 120);
 		table4.setBounds(240, 250, 120, 120);
 		finish.setBounds(360, 400, 90, 30);
-		
+		back.setBounds(30, 400, 90, 30);
+
+
 		add(table1);
 		add(table2);
 		add(table3);
 		add(table4);
 		add(finish);
+		add(back);
+
 		
 		table1.addActionListener(this);
 		table2.addActionListener(this);
 		table3.addActionListener(this);
 		table4.addActionListener(this);
 		finish.addActionListener(this);
-		
+		back.addActionListener(this);
+
+
 	}
 
 	@Override
@@ -69,6 +77,9 @@ public class t2_table extends JFrame implements ActionListener{
 		{
 			t1_counter t1 = new t1_counter();
 			t1.seating.setVisible(true);
+		}
+		else if(e.getSource() == back) {
+			new choseSys();
 		}
 	}
 }

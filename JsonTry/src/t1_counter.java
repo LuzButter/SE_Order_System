@@ -107,7 +107,7 @@ public class t1_counter implements ActionListener
 
                     seating.setVisible(false);
                     t2_login t2 = new t2_login();
-                    t2.main(null);
+                    //t2.main(null);
                 }
             }
         });
@@ -119,30 +119,30 @@ public class t1_counter implements ActionListener
                 if (T1.isVisible() == false)
                 {
                     {
-                        T1.setVisible(true);
+                        //T1.setVisible(true);
                         T1.setSelected(false);
-                        UpdateJSONFile.SwitchState("Table1", "Empty");
+                        UpdateJSONFile.SwitchState("Table1", "Dirty");
                     }
 
                     if (T2.isVisible() == false)
                     {
-                        T2.setVisible(true);
+                        //T2.setVisible(true);
                         T2.setSelected(false);
-                        UpdateJSONFile.SwitchState("Table2", "Empty");
+                        UpdateJSONFile.SwitchState("Table2", "Dirty");
                     }
 
                     if (T3.isVisible() == false)
                     {
-                        T3.setVisible(true);
+                        //T3.setVisible(true);
                         T3.setSelected(false);
-                        UpdateJSONFile.SwitchState("Table3", "Empty");
+                        UpdateJSONFile.SwitchState("Table3", "Dirty");
                     }
 
                     if (T4.isVisible() == false)
                     {
-                        T4.setVisible(true);
+                        //T4.setVisible(true);
                         T4.setSelected(false);
-                        UpdateJSONFile.SwitchState("Table4", "Empty");
+                        UpdateJSONFile.SwitchState("Table4", "Dirty");
                     }
                 }
             }
