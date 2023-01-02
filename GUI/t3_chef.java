@@ -1,4 +1,4 @@
-package GUI;
+
 
 import javax.swing.*;
 import java.awt.event.ActionListener;
@@ -10,7 +10,7 @@ public class t3_chef
     static JFrame Desk ;
     public static void frame()
     {
-        Desk = new JFrame("¼p®v¨t²Î");
+        Desk = new JFrame("ï¿½pï¿½vï¿½tï¿½ï¿½");
         Desk.setSize(480, 480);
         Desk.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Desk.setLayout(null);
@@ -28,7 +28,7 @@ public class t3_chef
         JButton table4 = new JButton("Table4");
 		table4.setBounds(240, 250, 120, 120);
         Desk.add(table4);
-        JButton bk = new JButton("ªð¦^");
+        JButton bk = new JButton("ï¿½ï¿½^");
         bk.setBounds(20, 410, 80, 20);
         Desk.add(bk);
 
@@ -100,8 +100,8 @@ public class t3_chef
 
     public  static void frame2() 
     {
-        String food[] = {"QQ¤º¤º¦n³Ü¨ì«§¼P¯ù ", "¤j¦×´Î ", "¼öÂûÂû ", "ª¯»L±Æ"};
-        JFrame ready = new JFrame("·Ç³Æ¥XÀ\");
+        String food[] = {"QQï¿½ï¿½ï¿½ï¿½ï¿½nï¿½Ü¨ì«§ï¿½Pï¿½ï¿½ ", "ï¿½jï¿½×´ï¿½ ", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ", "ï¿½ï¿½ï¿½Lï¿½ï¿½"};
+        JFrame ready = new JFrame("ï¿½Ç³Æ¥Xï¿½");
         ready.setLayout(null);
         ready.setSize(480, 480);
         ready.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -115,10 +115,10 @@ public class t3_chef
         {
             input.append(food[i]);
         }
-        JButton send_out = new JButton("°e¥X");
+        JButton send_out = new JButton("ï¿½eï¿½X");
         send_out.setBounds(360, 410, 80, 20);
 
-        JButton back = new JButton("ªð¦^");
+        JButton back = new JButton("ï¿½ï¿½^");
         back.setBounds(20, 410, 80, 20);
 
         ready.add(output);
