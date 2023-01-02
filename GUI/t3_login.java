@@ -1,4 +1,4 @@
-package GUI;
+
 
 import javax.swing.*;
 
@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 public class t3_login {
     public static void main(String[]args)
     {
-        JFrame frame = new JFrame("¼p®vµn¤J");
+        JFrame frame = new JFrame("ï¿½pï¿½vï¿½nï¿½J");
         frame.setSize(300,200);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
@@ -20,19 +20,19 @@ public class t3_login {
 
         pack();
 
-        JLabel userlable = new JLabel("¨Ï¥ÎªÌ:");
+        JLabel userlable = new JLabel("ï¿½Ï¥Îªï¿½:");
         panel.add(userlable);
 
         JTextField usertext = new JTextField(20);
         panel.add(usertext);
 
-        JLabel passlable = new JLabel("±K½X:");
+        JLabel passlable = new JLabel("ï¿½Kï¿½X:");
         panel.add(passlable);
 
         JPasswordField password = new JPasswordField(20);
         panel.add(password);
 
-        JButton button = new JButton("µn¤J");
+        JButton button = new JButton("ï¿½nï¿½J");
         panel.add(button);
 
         button.addActionListener(new ActionListener()
