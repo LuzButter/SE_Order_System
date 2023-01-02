@@ -10,14 +10,14 @@ public class choseSys extends JFrame implements ActionListener{
 	private JButton t2 = new JButton("服務生");
 	private JButton t3 = new JButton("廚師");
 	private JButton t4 = new JButton("雜工");
-	private JButton t5 = new JButton("經理");
+	//private JButton t5 = new JButton("經理");
 	
 	public static void main(String[] args) {
 		choseSys choseSys = new choseSys();
 	}
 	
 	public choseSys() {
-		setLayout(new GridLayout(5, 1));
+		setLayout(new GridLayout(4, 1));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(480, 480);
 		//this.setLocation(300, 400);
@@ -26,13 +26,13 @@ public class choseSys extends JFrame implements ActionListener{
 		add(t2);
 		add(t3);
 		add(t4);
-		add(t5);
+		//add(t5);
 		
 		t1.addActionListener(this);
 		t2.addActionListener(this);
 		t3.addActionListener(this);
 		t4.addActionListener(this);
-		t5.addActionListener(this);
+		//t5.addActionListener(this);
 		
 		
 		this.setVisible(true);
@@ -63,11 +63,11 @@ public class choseSys extends JFrame implements ActionListener{
 			this.setVisible(false);
 			new t4_login();
 		}
-		else if(s==t5)	{
+		/*else if(s==t5)	{
 			
 			this.setVisible(false);
 			//new t5_login();
-		}
+		}*/
 	}
 
 }
